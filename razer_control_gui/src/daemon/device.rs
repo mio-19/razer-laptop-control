@@ -52,13 +52,13 @@ impl RazerPacket {
     }
 
     fn calc_crc(&mut self) -> Vec<u8>{
-        let mut res: u8 = 0x00;
+        //let mut res: u8 = 0x00;
         let buf: Vec<u8> = bincode::serialize(self).unwrap();
-        for i in 2..88 {
-            res ^= buf[i];
-        }
+        //for i in 2..88 {
+        //    res ^= buf[i];
+        //}
 
-        self.crc = res;
+        //self.crc = res;
         return buf;
     }
 }
